@@ -1,0 +1,260 @@
+/***** theme customize *****/
+[data-theme="dark"] {
+   --main-color: #272b30;
+   --seconde-color: #32383e;
+   --color-text: #fff;
+   --btn-main-color: #272729;
+   --btn-free-color:#414550;
+   --icon-color: #16b6df;
+}
+
+[data-theme="light"] {
+   --main-color: #eeeeee;
+   --seconde-color: #909396;
+   --color-text: #000;
+   --btn-main-color: #414550;
+   --btn-free-color: #272729;
+}
+
+.main-btn {
+   background-color: var(--btn-main-color);
+   color: var(--color-text);
+}
+.free-btn{
+   background-color: var(--btn-free-color);
+   color: var(--color-text);
+   width: 25%;
+}
+.play-btn{
+   background-color: #4799eb;
+   color: #fff;
+   width: 73%;
+   margin-left: 2%;
+}
+.free-btn:hover,
+.main-btn:hover {
+   background: linear-gradient(rgb(0 0 0 / 0.1), rgb(0 0 0 / 0.2));
+}
+.play-btn:hover{
+   background: #49adffab 
+}
+.form-control,
+.form-control:focus {
+   background-color: var(--main-color);
+   color: var(--color-text);
+   border-color: var(--seconde-color);
+}
+
+.form-control::placeholder {
+   color: var(--color-text);
+}
+
+.badge-color {
+   background-color: var(--seconde-color);
+}
+
+/***** End theme customize *****/
+
+/***** Global *****/
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&display=swap");
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+* {
+   transition: background-color 0.5s, color 0.2s;
+}
+
+body {
+   font-family: "Comfortaa", cursive;
+   min-height: 100%;
+   min-width: 100%;
+   background-color: var(--main-color);
+   color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: "Nerko One", cursive;
+   color: var(--color-text) !important;
+}
+
+a,
+p,
+span {
+   color: inherit !important;
+}
+
+ul {
+   list-style-position: inside;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+   appearance: none;
+   display: none;
+}
+
+.login .login-area,
+.register .register-area {
+   background-color: rgb(255 255 255 / 0.1);
+   backdrop-filter: blur(5px);
+}
+
+.nav-bg {
+   background-color: transparent;
+   transition: background-color 0.2s;
+}
+.nav-bg.scrolled {
+   background-color: var(--main-color);
+   border-bottom: var(--main-color) 1px solid;
+
+}
+
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover {
+   color: #09c !important;
+   transition: color 0.5s;
+}
+
+.navbar-toggler-icon {
+   color: var(--color-text) !important;
+ }
+
+::-webkit-scrollbar {
+   width: 0.625rem;
+}
+
+::-webkit-scrollbar-track {
+   background-color: var(--seconde-color);
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: var(--color-text);
+   border-radius: 50px;
+   box-shadow: 0 0 5px rgb(0 0 0 / 0.5) inset;
+}
+/***** End Global *****/
+
+/***** Login *****/
+.login .image {
+   background: url("../assets/images/login.jpg") center / cover no-repeat;
+   min-height: 100%;
+}
+/***** End Login *****/
+
+/***** Register *****/
+
+.register .image {
+   background: url("../assets/images/register.jpg") center / cover no-repeat;
+   min-height: 100%;
+}
+/***** End Register *****/
+
+/***** Home *****/
+.home .card {
+   filter: grayscale(0.7);
+   transition: transform 0.5s, filter 0.5s 0.1s;
+}
+
+.home .card:hover {
+   transform: scale(1.05);
+   filter: grayscale(0);
+}
+header{
+   background-image: url(../assets/images/wraper.png);
+   background-size: cover;
+   background-position: center;
+   height: 30vh;
+   position: relative;
+}
+@media (max-width: 992px) {
+   nav .nav-item {
+      width: 100%;
+      text-align: center;
+      background-color: var(--main-color);
+    }
+ }
+/***** End Home *****/
+
+/***** Details *****/
+.details {
+   background-color: #272729be;
+
+   backdrop-filter: blur(4px);
+}
+/***** End Details *****/
+
+/***** Loader *****/
+.loading {
+   position: fixed;
+   z-index: 9999;
+   inset: 0;
+   background-color: #272b30e3;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.loader {
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   display: inline-block;
+   border-top: 4px solid #fff;
+   border-right: 4px solid transparent;
+   box-sizing: border-box;
+   animation: rotation 1s linear infinite;
+   position: relative;
+}
+.loader::after {
+   content: "";
+   box-sizing: border-box;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100px;
+   height: 100px;
+   border-radius: 50%;
+   border-left: 4px solid #ff3d00;
+   border-bottom: 4px solid transparent;
+   animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+/***** End Loader *****/
+
+.breadcrumb-item + .breadcrumb-item::before {
+   color: var(--color-text);
+}
+
+/** Start Rating **/
+.starrating > input {display: none; }  /* Remove radio buttons */
+
+.starrating > label:before { 
+  content: "\f005"; /* Star */
+  margin: 2px;
+  font-size: 2em;
+  font-family: FontAwesome;
+  display: inline-block; 
+}
+
+.starrating > label
+{
+  color: #222222; /* Start color when not clicked */
+}
+
+.starrating > input:checked ~ label
+{ color: #ffca08 ; } /* Set yellow color when star checked */
+
+.starrating > input:hover ~ label
+{ color: #ffca08 ;  } /* Set yellow color when star hover */
+
