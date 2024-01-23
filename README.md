@@ -1,5 +1,4 @@
 # FreeToGame
-# Game Catalog Website
 
 ## Overview
 
