@@ -80,7 +80,7 @@ async function loginForm(userData) {
   if (response.message === "success") {
     localStorage.setItem('uToken', response.token);
     
-    toastr.success('Success', 'Activated', { timeOut: 10000 });
+    toastr.success('Log in Success', { timeOut: 10000 });
     
     location.href = "./home.html";
   } else {
