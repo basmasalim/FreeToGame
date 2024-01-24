@@ -25,7 +25,7 @@ This project is a simple web application that displays a catalog of games based 
 1. Clone the repository:
 
    ```bash
-   git clone <https://github.com/basmasalim/FreeToGame.git>
+   git clone https://github.com/basmasalim/FreeToGame.git
     ```
 2. Open `index.html` in your web browser.
 
